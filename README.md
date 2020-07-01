@@ -1,5 +1,5 @@
 # ICU Forecast
-A tool which forecasts ICU length of stay for each patient, and from that unit turnover, in real time using data available in all modern EHR software solutions.
+A tool which risk stratifies patients for prolonged stay on ICU admission, using data available in all modern EHR software solutions.
 
 ## Getting Started
 
@@ -7,56 +7,30 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You will need Python 3.7 or later and the following packages (installed via pip or conda):
 
 ```
-pip install streamlit
-pip install pandas
-pip install sklearn
-pip install numpy
+jupyter
+pandas
+sklearn
+tensorflow
+keras
+catboost
+lightgbm
 ```
+
+In addition to python 3.7, the notebooks presume the data will be stored in a postgresql schema.  You will need to install postgresql, mysqld, sqlite, or the SQL server of your choosing.  For instructions on how to do this, [check out the eICU installation tutorial over at PhysioNet](https://eicu-crd.mit.edu/tutorials/install_eicu_locally/).
+
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+Once you have access to a SQL server containing the data (with schema named eicu), you will need to open the Jupyter notebooks and run the notebooks in order (labeled 1 through 10).  __Note that the first Jupyter notebook will contain sqlalchemy code to connect to your SQL server, so you must modify the address after 
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+After running the notebooks, you will have a CatBoost classifier applicable to the dataset.  For deployment, you will need to wrap the code provided with an ETL from your EMR data format to match the eICU data format.  If your institution already uses eICU, this should not be an issue.
+
+You can pickle the CatBoost classifier to run elsewhere.  One could wrap the classifier
 
 ## Built With
 
