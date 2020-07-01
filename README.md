@@ -34,9 +34,9 @@ You can pickle the CatBoost classifier to run elsewhere.  One could wrap the cla
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [eICU-CRD](https://physionet.org/content/eicu-crd/2.0/) - Source data (requires credentialed access)
+* [Anaconda]() - Dependency Management
+* [Jupyter Lab](https://www.jupyter.org) - the standard for interactive Python
 
 ## Contributing
 
@@ -44,21 +44,18 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+This project will not have public releases.
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **William W. Supplee, MD** - *Initial work* - [supplee](https://github.com/supplee)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed for free distribution only as permitted by PhysioNet.
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thanks to Jason Lee for excellent tutorials.
+* Inspired by the work of Toby Manders MD and his Insight project.
 
